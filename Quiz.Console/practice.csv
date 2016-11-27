@@ -1,0 +1,154 @@
+"Win`","restart console",conemu
+"Ctrl-WCtrl-K","go to upper window",vim
+@"<t each=""{a,b in bs}"" c=""{a}"" d=""{b}""..<t>..opts.a}..","iterate map, pass key and val as params to the tag and use key within the tag implementation",riot
+"f(){","this.f=function(){ euivalence",riot
+@"this.a={""a"":1,""b"":2,..}","mock map",riot
+@"onclick=""{parent.f}""","add onclick on each object",riot
+"e.item","access object in the iterated array from the callback",riot
+@"<t each=""{a in as}"" b=""{a.c}""..","iter inside tag and assign attributes",riot
+"this.a=[{b:'1',c:'abc'},..]","mock array of objs with number and string",riot
+":scope","tag global style block",riot
+";","at the end of each style",riot
+"label.x","style for label with class x",riot
+"Spacebarx","insert x before cursor",vim
+"RiotControl","central event controller/dispacher",riot
+@"<input type=""checkbox"" onchange=""{f}""/>","checkbox input with onchange callback",riot
+"<style scoped>","riot css tag",riot
+"f","can not create multiple tags in single tag file",riot
+"{a.substr(0,5)}","first 5 chars of string",riot
+"t","displayed {a} inside a html tag to format js output",riot
+"*.tag","compiled file extension",riot
+"t","no need for mounting in compiled riot file, tags mounted automaticly",riot
+@"<t a=""abc"" b=""3""/>","pass string param and int param 3 to tag in compile file",riot
+"t","js param can be assigned below where it is used in tag/code",riot
+"**/*.*","recursive file search",vim 
+":vim /let/*.fs","search for let in fs files",vim
+":vim /ref/j *.*","search for ref, turn off jump",vim
+"Ctrl-WCtrl-R","rotate window downwards",vim
+":copen","open quickfix list",vim
+"H","land top of a screen",vim
+"{","land previous empty line",vim
+"}","land next empty line",vim
+"M","land middle of the sceen",vim
+"(","land previous empty space/start of previous text block",vim
+")","land next empty space/start of next text block",vim
+"L","land botton of the screen",vim
+"CtrlWinEnter","full screen on of",conemu
+"3igoEsc","insert 3 go",vim
+"3fq","in line find 3rd q",vim
+"*","next word under the cursor",vim
+"#","previous word under the cursor",vim
+"fx;","in line land on second x",vim
+"fx,","in line land on x frward and go backwards once",vim
+":lCtrl-DTab","vim commands starting on l and auto complete",vim
+"vel","select word",vim
+":set noic","stop ignoring case while searching",vim
+"WinDelete","terminate current consoll",conemu
+"CtrlUp","conEmu buffer scrolling up",conemu
+"ShiftWinw","configurable new console window",conemu
+":h","help",vim
+"v3j:w f","save 3 down selected lines to file f",vim
+"Ctrl-F","page down",vim
+"Ctrl-B","page up",vim
+"Ctrl-E","scroll line down",vim
+":r f","paste content of file f",vim
+":r !dir","wklej wyjscie polecenia dir",vim 
+"R","replace more than one character",vim
+"u","undo last command",vim
+"U","undo changes in current line",vim
+"Ctrl-G","show file status and location",vim
+"G","go to end of file",vim
+"?x","search for x backwards",vim
+"Ctrl-I","go froward newer postions",vim
+"%","go to matching paranthesis",vim
+":4,7s/x/y/gc","change all accurance of x to y between line 4 and 7 and ask for confirmation",vim
+"riot.mount('*')","mount all tags on the page",riot
+"http-server","node js hosting",riot 
+"npm install http-server -g","install hhtp server golobaly",riot
+"{opts.a}","display external param in a tag implementation",riot
+"2","how many ways of passing params to a tag",riot
+"riot.mount('a',{b:'abc'})","on mount pass param of value string",riot
+"riot.mount('h-w')","mount h-w tag",riot
+@"<script src=""h-w.tag"" type=""riot/tag""></script>","add h-w tag file",riot
+"f","everything in {} is not javascript",riot
+"t","in tag html on top, js on bottom",riot
+"t","script tag for js in riot is optional",riot
+@""a {b}"",@"string interpolation for ""a""+this.b",riot
+"compile lib","what provides compiled tags at runtime",riot
+@"..{v}..this.v = ""abc""..","assign string value below displayed value",riot
+"Win`","restart console",conemu
+"Ctrl-WCtrl-W","toggle between open windows",vim 
+"Ctrl-WCtrl-K","go to upper window",vim
+@"<t each=""{a,b in bs}"" c=""{a}"" d=""{b}""..<t>..opts.a}..","iterate map, pass key val as params to the tag and use key within the tag implementation",riot
+"f(){","this.f=function(){ euivalence",riot
+@"this.a={""a"":1,""b"":2,..}","mock map",riot
+@"onclick=""{parent.f}""","add onclick on each object",riot
+"e.item","access object in the iterated array from the callback",riot
+@"<t each=""{a in as}"" b=""{a.c}""..","iter inside tag and assign attributes",riot
+"this.a=[{b:'1',c:'abc'},..]","mock array of objs with number and string",riot
+":scope","tag global style block",riot
+";","at the end of each style",riot
+"label.x","style for label with class x",riot
+"Spacebarx","insert x before cursor",vim
+"RiotControl","central event controller/dispacher",riot
+@"<input type=""checkbox"" onchange=""{f}""/>","checkbox input with onchange callback",riot
+"<style scoped>","riot css tag",riot
+"f","can not create multiple tags in single tag file",riot
+"{a.substr(0,5)}","first 5 chars of string",riot
+"t","displayed {a} inside a html tag to format js output",riot
+"*.tag","compiled file extension",riot
+"t","no need for mounting in compiled riot file, tags mounted automaticly",riot
+@"<t a=""abc"" b=""3""/>","pass string param and int param 3 to tag in compile file",riot
+"t","js param can be assigned below where it is used in tag/code",riot
+"**/*.*","recursive file search",vim 
+":vim /let/*.fs","search for let in fs files",vim
+":vim /ref/j *.*","search for ref, turn off jump",vim
+"Ctrl-WCtrl-R","rotate window downwards",vim
+":copen","open quickfix list",vim
+"H","land top of a screen",vim
+"{","land previous empty line",vim
+"}","land next empty line",vim
+"M","land middle of the sceen",vim
+"(","land previous empty space/start of previous text block",vim
+")","land next empty space/start of next text block",vim
+"L","land botton of the screen",vim
+"CtrlWinEnter","full screen on of",conemu
+"3igoEsc","insert 3 go",vim
+"3fq","in line find 3rd q",vim
+"*","next word under the cursor",vim
+"#","previous word under the cursor",vim
+"fx;","in line land on second x",vim
+"fx,","in line land on x frward and go backwards once",vim
+":lCtrl-DTab","vim commands starting on l and auto complete",vim
+"vel","select word",vim
+":set noic","stop ignoring case while searching",vim
+"WinDelete","terminate current consoll",conemu
+"CtrlUp","conEmu buffer scrolling up",conemu
+"ShiftWinw","configurable new console window",conemu
+":h","help",vim
+"v3j:w f","save 3 down selected lines to file f",vim
+"Ctrl-F","page down",vim
+"Ctrl-B","page up",vim
+"Ctrl-E","scroll line down",vim
+":r !dir","wklej wyjscie polecenia dir",vim 
+"R","replace more than one character",vim
+"u","undo last command",vim
+"U","undo changes in current line",vim
+"Ctrl-G","show file status and location",vim
+"?x","search for x backwards",vim
+"Ctrl-I","go froward newer postions",vim
+":4,7s/x/y/gc","change all accurance of x to y between line 4 and 7 and ask for confirmation",vim
+"riot.mount('*')","mount all tags on the page",riot
+"http-server","node js hosting",riot 
+"npm install http-server -g","install hhtp server golobaly",riot
+"{opts.a}","display external param in a tag implementation",riot
+"2","how many ways of passing params to a tag",riot
+"riot.mount('a',{b:'abc'})","on mount pass param of value string",riot
+"riot.mount('h-w')","mount h-w tag",riot
+@"<script src=""h-w.tag"" type=""riot/tag""></script>","add h-w tag file",riot
+"f","everything in {} is not javascript",riot
+"t","in tag html on top, js on bottom",riot
+"t","script tag for js in riot is optional",riot
+@""a {b}"",@"string interpolation for ""a""+this.b",riot
+"compile lib","what provides compiled tags at runtime",riot
+@"..{v}..this.v = ""abc""..","assign string value below displayed value",riot
