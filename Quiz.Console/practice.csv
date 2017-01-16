@@ -1,154 +1,90 @@
-"Win`","restart console",conemu
-"Ctrl-WCtrl-K","go to upper window",vim
-@"<t each=""{a,b in bs}"" c=""{a}"" d=""{b}""..<t>..opts.a}..","iterate map, pass key and val as params to the tag and use key within the tag implementation",riot
-"f(){","this.f=function(){ euivalence",riot
-@"this.a={""a"":1,""b"":2,..}","mock map",riot
-@"onclick=""{parent.f}""","add onclick on each object",riot
-"e.item","access object in the iterated array from the callback",riot
-@"<t each=""{a in as}"" b=""{a.c}""..","iter inside tag and assign attributes",riot
-"this.a=[{b:'1',c:'abc'},..]","mock array of objs with number and string",riot
-":scope","tag global style block",riot
-";","at the end of each style",riot
-"label.x","style for label with class x",riot
-"Spacebarx","insert x before cursor",vim
-"RiotControl","central event controller/dispacher",riot
-@"<input type=""checkbox"" onchange=""{f}""/>","checkbox input with onchange callback",riot
-"<style scoped>","riot css tag",riot
-"f","can not create multiple tags in single tag file",riot
-"{a.substr(0,5)}","first 5 chars of string",riot
-"t","displayed {a} inside a html tag to format js output",riot
-"*.tag","compiled file extension",riot
-"t","no need for mounting in compiled riot file, tags mounted automaticly",riot
-@"<t a=""abc"" b=""3""/>","pass string param and int param 3 to tag in compile file",riot
-"t","js param can be assigned below where it is used in tag/code",riot
-"**/*.*","recursive file search",vim 
-":vim /let/*.fs","search for let in fs files",vim
-":vim /ref/j *.*","search for ref, turn off jump",vim
-"Ctrl-WCtrl-R","rotate window downwards",vim
-":copen","open quickfix list",vim
-"H","land top of a screen",vim
-"{","land previous empty line",vim
-"}","land next empty line",vim
-"M","land middle of the sceen",vim
-"(","land previous empty space/start of previous text block",vim
-")","land next empty space/start of next text block",vim
-"L","land botton of the screen",vim
-"CtrlWinEnter","full screen on of",conemu
-"3igoEsc","insert 3 go",vim
-"3fq","in line find 3rd q",vim
-"*","next word under the cursor",vim
-"#","previous word under the cursor",vim
-"fx;","in line land on second x",vim
-"fx,","in line land on x frward and go backwards once",vim
-":lCtrl-DTab","vim commands starting on l and auto complete",vim
-"vel","select word",vim
-":set noic","stop ignoring case while searching",vim
-"WinDelete","terminate current consoll",conemu
-"CtrlUp","conEmu buffer scrolling up",conemu
-"ShiftWinw","configurable new console window",conemu
-":h","help",vim
-"v3j:w f","save 3 down selected lines to file f",vim
-"Ctrl-F","page down",vim
-"Ctrl-B","page up",vim
-"Ctrl-E","scroll line down",vim
-":r f","paste content of file f",vim
-":r !dir","wklej wyjscie polecenia dir",vim 
-"R","replace more than one character",vim
-"u","undo last command",vim
-"U","undo changes in current line",vim
-"Ctrl-G","show file status and location",vim
-"G","go to end of file",vim
-"?x","search for x backwards",vim
-"Ctrl-I","go froward newer postions",vim
-"%","go to matching paranthesis",vim
-":4,7s/x/y/gc","change all accurance of x to y between line 4 and 7 and ask for confirmation",vim
-"riot.mount('*')","mount all tags on the page",riot
-"http-server","node js hosting",riot 
-"npm install http-server -g","install hhtp server golobaly",riot
-"{opts.a}","display external param in a tag implementation",riot
-"2","how many ways of passing params to a tag",riot
-"riot.mount('a',{b:'abc'})","on mount pass param of value string",riot
-"riot.mount('h-w')","mount h-w tag",riot
-@"<script src=""h-w.tag"" type=""riot/tag""></script>","add h-w tag file",riot
-"f","everything in {} is not javascript",riot
-"t","in tag html on top, js on bottom",riot
-"t","script tag for js in riot is optional",riot
-@""a {b}"",@"string interpolation for ""a""+this.b",riot
-"compile lib","what provides compiled tags at runtime",riot
-@"..{v}..this.v = ""abc""..","assign string value below displayed value",riot
-"Win`","restart console",conemu
-"Ctrl-WCtrl-W","toggle between open windows",vim 
-"Ctrl-WCtrl-K","go to upper window",vim
-@"<t each=""{a,b in bs}"" c=""{a}"" d=""{b}""..<t>..opts.a}..","iterate map, pass key val as params to the tag and use key within the tag implementation",riot
-"f(){","this.f=function(){ euivalence",riot
-@"this.a={""a"":1,""b"":2,..}","mock map",riot
-@"onclick=""{parent.f}""","add onclick on each object",riot
-"e.item","access object in the iterated array from the callback",riot
-@"<t each=""{a in as}"" b=""{a.c}""..","iter inside tag and assign attributes",riot
-"this.a=[{b:'1',c:'abc'},..]","mock array of objs with number and string",riot
-":scope","tag global style block",riot
-";","at the end of each style",riot
-"label.x","style for label with class x",riot
-"Spacebarx","insert x before cursor",vim
-"RiotControl","central event controller/dispacher",riot
-@"<input type=""checkbox"" onchange=""{f}""/>","checkbox input with onchange callback",riot
-"<style scoped>","riot css tag",riot
-"f","can not create multiple tags in single tag file",riot
-"{a.substr(0,5)}","first 5 chars of string",riot
-"t","displayed {a} inside a html tag to format js output",riot
-"*.tag","compiled file extension",riot
-"t","no need for mounting in compiled riot file, tags mounted automaticly",riot
-@"<t a=""abc"" b=""3""/>","pass string param and int param 3 to tag in compile file",riot
-"t","js param can be assigned below where it is used in tag/code",riot
-"**/*.*","recursive file search",vim 
-":vim /let/*.fs","search for let in fs files",vim
-":vim /ref/j *.*","search for ref, turn off jump",vim
-"Ctrl-WCtrl-R","rotate window downwards",vim
-":copen","open quickfix list",vim
-"H","land top of a screen",vim
-"{","land previous empty line",vim
-"}","land next empty line",vim
-"M","land middle of the sceen",vim
-"(","land previous empty space/start of previous text block",vim
-")","land next empty space/start of next text block",vim
-"L","land botton of the screen",vim
-"CtrlWinEnter","full screen on of",conemu
-"3igoEsc","insert 3 go",vim
-"3fq","in line find 3rd q",vim
-"*","next word under the cursor",vim
-"#","previous word under the cursor",vim
-"fx;","in line land on second x",vim
-"fx,","in line land on x frward and go backwards once",vim
-":lCtrl-DTab","vim commands starting on l and auto complete",vim
-"vel","select word",vim
-":set noic","stop ignoring case while searching",vim
-"WinDelete","terminate current consoll",conemu
-"CtrlUp","conEmu buffer scrolling up",conemu
-"ShiftWinw","configurable new console window",conemu
-":h","help",vim
-"v3j:w f","save 3 down selected lines to file f",vim
-"Ctrl-F","page down",vim
-"Ctrl-B","page up",vim
-"Ctrl-E","scroll line down",vim
-":r !dir","wklej wyjscie polecenia dir",vim 
-"R","replace more than one character",vim
-"u","undo last command",vim
-"U","undo changes in current line",vim
-"Ctrl-G","show file status and location",vim
-"?x","search for x backwards",vim
-"Ctrl-I","go froward newer postions",vim
-":4,7s/x/y/gc","change all accurance of x to y between line 4 and 7 and ask for confirmation",vim
-"riot.mount('*')","mount all tags on the page",riot
-"http-server","node js hosting",riot 
-"npm install http-server -g","install hhtp server golobaly",riot
-"{opts.a}","display external param in a tag implementation",riot
-"2","how many ways of passing params to a tag",riot
-"riot.mount('a',{b:'abc'})","on mount pass param of value string",riot
-"riot.mount('h-w')","mount h-w tag",riot
-@"<script src=""h-w.tag"" type=""riot/tag""></script>","add h-w tag file",riot
-"f","everything in {} is not javascript",riot
-"t","in tag html on top, js on bottom",riot
-"t","script tag for js in riot is optional",riot
-@""a {b}"",@"string interpolation for ""a""+this.b",riot
-"compile lib","what provides compiled tags at runtime",riot
-@"..{v}..this.v = ""abc""..","assign string value below displayed value",riot
+Seq.append a bxo,ex wraps two given enumerations as a single concatinated enumeration,seq
+a|>Seq.choose b,apply function to each element return only where Some,seq 
+let a:seq<int>=Seq.cast b,cast loosly typed array list,seq
+let a=Seq.cache b,cache the sequance to avoid recomputing,seq
+upgrade a,choco update program,choco
+search a,choco search program,choco
+axediff,compare two files,e
+axdired,as file manager,e
+ctrl-x3,new window on right,e
+ctrl-x2,new window below,e
+ctrl-x1,remove other windows,e
+ctrl-xi,insert file,e
+ctrl-xw,save as,e
+-nw,open emacs on current terminal,e
+ctrl-w,cut,e
+aw,copy,e
+ctrl-y,paste,e
+ctrl-r,search backward string,e
+car,search bacward regex,e
+a%,replace string,e
+ca%,replace regex,e
+aa,go to beginning of section,e
+a<,go to beginning of buffer,e
+ae,go to end of sectione,e
+grep -nHr,recursive directory search,e
+a`,next error or grep result,e
+a>,go to end of buffer,e
+ctrl-`,next grep result,e
+ctrl-x4.,go to tag in other window,e
+ctrl-xrb,jump to bookmark,e
+ctrl-xrm,set bookmark,e
+ctrl-xrl,edit bookmarks list,e
+a!,execute command and catch its output,e
+ctrl-xvi,vc register file,e
+ctrl-xvg,vc annotate,e
+ax list-packages,list packages from elpa,e
+ctrl-d~\,show emacs home directory for init file,e
+ap,fsharp-mode go to previous error,e
+ccctrl-t,fsharp-mode display tooltip,e
+oa,quant describe,l
+csText,case sensitive searc,e
+c_,undo,e
+a$,spell check mode,e
+axflyspell-mode,flyspell-mode,e
+axshell,start terminal,e
+ccctrl-r,fsm evalluate region,e
+cs,search forward string,e
+cas,search forward regex,e
+agg,go to line,e
+ca,move beginnig of line,e
+ctrl-d,delete char,e
+ctrl-g,quit command,e
+ctrl-l,center the screen,e
+ctrl-k, kill to end of line,e
+cs,start/toggle marking a region,e
+ad,delete word,e
+af,move forward one word,e
+cf,move forward one character,e
+agc,go to buffer position,e
+ctrl-b,backward char,e
+cm,like enter,e
+cv,page down,e
+an,fsharp-mode go to next error,e
+ccl,fsharp-mode shift region to left,e
+cccc,fsharp-mode compile with fsc,e
+ccca,fsharp-mode open alternate file,e
+av,page up,e
+ab,move back one word,e
+ctrl-xcf,visit new file,e
+ctrl-xd,open directory,e
+ctrl-xh,select all,e
+ctrl-xctrl-b,list all buffers,e
+ctrl-xvd,vc status of files in directory,e
+ccc.,fsharp-mode manual complition,e
+ctrl-xk,kill buffer,e
+ccx,fsharp-mode run exe,e
+ctrl-xb,switch to a diffrent buffer,e
+al,lower case,e
+ac,capitalize,e
+ccctrl-r,fsm evalluate region,e
+cccf,fsm load current buffer into top level,e
+ccctrl-e,fsm evaluate current toplevel phrase,e
+cah,fsm mark current toplevel phrase,e
+cccs,fsm show interactive buffer,e
+ccr,fsm shift region to right,e
+ccup,fsm move cursor to the begining of a block,e
+ccctrl-p,fsm load project for auto complition and tooltip,e
+a.,fsm jump to definition of symbol at point,e
+"a,",fsm return to where point was before,e
+ccctrl-q,fsm quit current background compiler process,e

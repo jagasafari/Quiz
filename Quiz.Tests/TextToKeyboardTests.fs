@@ -6,11 +6,11 @@ open Swensen.Unquote
 open Quiz
 open Quiz.TextToKeyboard
 
-[<TestCase("Tab")>]
+[<TestCase("tab")>]
 let ``string starts with tab`` str =
     str |> getConsoleKeys [] =! [Ck ck.Tab]
 
-[<TestCase("Escape")>]
+[<TestCase("escape")>]
 let ``text expected answer starts with Esc`` str =
    str |> getConsoleKeys [] =! [Ck ck.Escape] 
   
@@ -20,15 +20,15 @@ let ``text expected answer starts with Esc`` str =
 let ``trim start of the string`` str len expected =
     trimString str len =! expected
 
-[<TestCase("TabEscape")>]
+[<TestCase("tabescape")>]
 let ``first Tab then Escape`` str = 
     str |> getConsoleKeys [] =! [Ck ck.Tab; Ck ck.Escape]
 
-[<TestCase("EscapeTab")>]
+[<TestCase("escapetab")>]
 let ``first Escape then Tab`` str =
     str |> getConsoleKeys [] =! [Ck ck.Escape; Ck ck.Tab]
 
-[<TestCase("EscapeEscapeEscape")>]
+[<TestCase("escapeescapeescape")>]
 let ``triple Escape`` str =
     str |> getConsoleKeys [] =! [Ck ck.Escape; Ck ck.Escape; Ck ck.Escape]
 
@@ -36,21 +36,21 @@ let ``triple Escape`` str =
 let ``entire answer string has been processed, call base case`` str =
     str |> getConsoleKeys [Ck ck.A] =! [Ck ck.A]
 
-[<TestCase("Tab")>]
+[<TestCase("tab")>]
 let ``accumulate Tab`` str =
     str |> getConsoleKeys [Ck ck.A] =! [Ck ck.A; Ck ck.Tab]
 
-[<TestCase("Ctrl-B")>]
+[<TestCase("ctrl-B")>]
 let ``ctrl key`` str =
     str |> getConsoleKeys [] =! [Cm (cm.Control, ck.B)]
 
-[<TestCase("Ctrl-B", "B")>]
-[<TestCase("Ctrl-F", "F")>]
-[<TestCase("Ctrl-R", "R")>]
+[<TestCase("ctrl-B", "B")>]
+[<TestCase("ctrl-F", "F")>]
+[<TestCase("ctrl-R", "R")>]
 let ``retrive ctrl key`` str expected =
     retrieveCtrlKey str =! Enum.Parse(typeof<ConsoleKey>, expected)
 
-[<TestCase("Ctrl-F")>]
+[<TestCase("ctrl-F")>]
 let ``starts with ctrl key``str =
     str |> getConsoleKeys [] =! [Cm (cm.Control, ck.F)]
 

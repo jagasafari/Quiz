@@ -33,10 +33,11 @@ let mapKeyboardChar (ch: Char) =
         | '#' -> Cm (cm.Shift, ck.D3)
         | '.' -> Ck ck.OemPeriod
         | '[' -> Ck ck.Oem4
-        | ']' -> Ck ck.Oem5
+        | ']' -> Ck ck.Oem6
         | '(' -> Cm (cm.Shift, ck.D9)
         | ')' -> Cm (cm.Shift, ck.D0)
         | '{' -> Cm (cm.Shift, ck.Oem4)
+        | '|' -> Cm (cm.Shift, ck.Oem5)
         | '*' -> Cm (cm.Shift, ck.D8)
         | ':' -> Cm (cm.Shift, ck.Oem1)
         | '!' -> Cm (cm.Shift, ck.D1)
@@ -52,9 +53,8 @@ let mapKeyboardChar (ch: Char) =
         | ';' -> Ck ck.Oem1
         | '?' -> Cm (cm.Shift, ck.Oem2)
         | '>' -> Cm (cm.Shift, ck.OemPeriod)
+        | '_' -> Cm (cm.Shift, ck.OemMinus)
         | _ -> Ck ck.D8
-
-type KeyType = Tab | Escape 
 
 let startsWith pattern (str: string) = str.StartsWith pattern
 
@@ -67,14 +67,13 @@ let retrieveCtrlKey (str: string) = Enum.Parse (typeof<ConsoleKey>, (str.[5]) |>
 let rec getConsoleKeys acc str = 
     let nextCall key str trimStr = getConsoleKeys (acc@[key]) (trimString str (strLength trimStr))
     match str with
-    | s when s |> startsWith "Tab" -> nextCall (Ck ck.Tab) s "Tab"
-    | s when s |> startsWith "Escape" -> nextCall (Ck ck.Escape) s "Escape"
-    | s when s |> startsWith "Spacebar" -> nextCall (Ck ck.Spacebar) s "Spacebar"
-    | s when s |> startsWith "Delete" -> nextCall (Ck ck.Delete) s "Delete"
-    | s when s |> startsWith "Ctrl-" -> 
+    | s when s |> startsWith "delete" -> nextCall (Ck ck.Delete) s "delete"
+    | s when s |> startsWith "escape" -> nextCall (Ck ck.Escape) s "escape"
+    | s when s |> startsWith "tab" -> nextCall (Ck ck.Tab) s "tab"
+    | s when s |> startsWith "ctrl-" -> 
         let _, ctrlKey = tryConvertToConsoleKey (s.[5])
         nextCall (Cm (cm.Control, ctrlKey)) s "Ctrl-X"
     | s  when s = "" -> acc
     | s -> nextCall (s.[0]|> mapKeyboardChar) s "X"
 
-let preProcess (str:string) = str.TrimStart('@', ' ')
+let preProcess (str:string) = str.TrimStart('@')
